@@ -1,0 +1,28 @@
+body {
+  padding: 20px;
+  font-damily: Arial, sans-serif;
+  background-color: #1a1919ff;
+  color: #ebe8e8ff;
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+  border-radius: 80px;
+  border: 2px solid #e9e1e1ff;
+}
+
+.facts {
+  font-size: 2rem;
+}
+.header {
+  font-size: 2.5rem;
+  font-style: bold;
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
