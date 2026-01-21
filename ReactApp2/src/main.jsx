@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createElement } from 'react'
 import { createRoot } from 'react-dom/client'
 import logo from './react-logo.png';
+import header  from './Header';
 import './index.css'
 import App from './App.jsx'
 
@@ -10,20 +11,7 @@ createRoot(document.getElementById('root')).render(
  <TemporaryName />
 )
 
-function Header(){
-   return (
-<header className='header'>
-       <img src={logo} alt="logo"  className='logo'/>
-       <nav>
-         <ul className='nav-list'>
-            <li>Home</li>
-            <li>Blog</li>
-            <li>LogIn</li> 
-         </ul>
-       </nav>
-   </header>
-   )
-}
+
 
 function TemporaryName(){
    return   (
