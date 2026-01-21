@@ -16,7 +16,7 @@ I began learning React recently and focused on understanding the **core concepts
 * Component composability
 
 
-🌱 Learning Update
+##🌱 Learning Update
 
 Today, I built my first React-based UI while learning React.
 
