@@ -15,7 +15,7 @@ I began learning React recently and focused on understanding the **core concepts
 * `useState` hook
 * Component composability
 
-🌱## Learning Update
+🌱##First project(travel journey)
 
 Today, I built my first React-based UI while learning React.
 
