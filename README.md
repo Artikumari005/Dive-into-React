@@ -15,31 +15,22 @@ I began learning React recently and focused on understanding the **core concepts
 * `useState` hook
 * Component composability
 
-🌱##First project(travel journey)
+
+🌱 Learning Update
 
 Today, I built my first React-based UI while learning React.
 
 The UI looks like a travel card layout, where:
-
--Each card shows a place image
-
--Country name and place name are displayed
-
--Dates and short description are mentioned
-
--A “View on Google Maps” link opens the location in a new tab
+✔️ Each card shows a place image
+✔️ Country name and place name are displayed
+✔️ Dates and a short description are mentioned
+✔️ “View on Google Maps” link opens the location in a new tab
 
 This helped me understand:
-
-.How JSX is written
-
-.How components are structured
-
-.How layouts are created using React and CSS
-
-.How external links work inside React components
-
-
+✔️ How JSX is written
+✔️ How components are structured
+✔️ How layouts are created using React and CSS
+✔️ How external links work inside React components
 
 ## 🎯 Purpose
 
