@@ -1,0 +1,40 @@
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  width: 250px;
+  height: 350px;
+  margin: 40px;
+  border-radius: 8px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.map-link {
+  color: #3a3939ff;
+  font-size: 1rem;
+}
+.content {
+  text-align: left;
+  margin-top: 60px;
+  margin-right: 130px;
+}
+.place-name {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 0.2;
+}
+.dates {
+  font-size: 1.2rem;
+}
+.about {
+  font-size: 1.4rem;
+  color: #413f3fff;
+  margin-right: 250px;
+}
