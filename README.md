@@ -32,6 +32,7 @@ This helped me understand:
 ✔️ How layouts are created using React and CSS
 ✔️ How external links work inside React components
 
+- Today I learned about props how it works inside the jsx .....
 ## 🎯 Purpose
 
 * To build a strong foundation in React
