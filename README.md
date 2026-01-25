@@ -33,6 +33,9 @@ This helped me understand:
 ✔️ How external links work inside React components
 
 - Today I learned about props how it works inside the jsx .....
+- Today I learned about Props in React and how they help in passing data from parent components to child components. Props make components reusable, dynamic, and easy to manage by allowing the same component to display different information without rewriting code.
+
+  
 ## 🎯 Purpose
 
 * To build a strong foundation in React
