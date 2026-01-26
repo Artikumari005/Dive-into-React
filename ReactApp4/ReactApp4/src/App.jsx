@@ -2,9 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 
 import './App.css'
-import norwayImg from "./assets/norway.jpg"
 
-import Card from './Card'
+
 
 function App() {
   
