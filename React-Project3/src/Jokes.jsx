@@ -1,5 +1,7 @@
 import './index.css'
 export default function Jokes(props){
+    {/*console.log(!props.isPun)*/}
+    console.log(props.comments)
     return(
         <>
       {/*  <p className="setup"> Setup{props.setup}</p>*/}
