@@ -36,6 +36,7 @@ This helped me understand:
 * Today I learned about Props in React and how they help in passing data from parent components to child components. Props make components reusable, dynamic, and easy to manage by allowing the same component to display different information without rewriting code.
 * I learned more about props like props destruction and also build small jokes webpage in which i implement the concept of props.
 * In order to practice the props , today i again build the same project named travel-journey(react-project2) by using props . Now I have pretty good knowledge about props ..
+* I have learned the map.array() ,map() in React is used to loop through an array and return a new array of JSX elements to render dynamic lists in the UI. And I rebuild the project of joke(reactapp3) by using map() that makes the project dynamic.
 
   
 ## 🎯 Purpose
