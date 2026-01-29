@@ -37,6 +37,7 @@ This helped me understand:
 * I learned more about props like props destruction and also build small jokes webpage in which i implement the concept of props.
 * In order to practice the props , today i again build the same project named travel-journey(react-project2) by using props . Now I have pretty good knowledge about props ..
 * I have learned the map.array() ,map() in React is used to loop through an array and return a new array of JSX elements to render dynamic lists in the UI. And I rebuild the project of joke(reactapp3) by using map() that makes the project dynamic.
+* I completed a data-driven React part where I learned the importance of reusability, how to use props and map(), and improve a previously built project by converting repeated UI into simple reusable components.
 
   
 ## 🎯 Purpose
