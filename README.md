@@ -38,7 +38,7 @@ This helped me understand:
 * In order to practice the props , today i again build the same project named travel-journey(react-project2) by using props . Now I have pretty good knowledge about props ..
 * I have learned the map.array() ,map() in React is used to loop through an array and return a new array of JSX elements to render dynamic lists in the UI. And I rebuild the project of joke(reactapp3) by using map() that makes the project dynamic.
 * I completed a data-driven React part where I learned the importance of reusability, how to use props and map(), and improve a previously built project by converting repeated UI into simple reusable components.
-
+* Today I start with react states in which I am going to learn lots of things like event listener, api call that i have done in JS . I start this learning pattern with the project named chef claude in which after getting the list of ingredient from the user we show some recipe to them . These recipe recommendation is fetch from claude api .
   
 ## 🎯 Purpose
 
