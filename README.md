@@ -36,6 +36,7 @@ The UI looks like a travel card layout, where:
 * I completed a data-driven React part where I learned the importance of reusability, how to use props and map(), and improve a previously built project by converting repeated UI into simple reusable components.
 * Today I start with react states in which I am going to learn lots of things like event listener, api call that i have done in JS . I start this learning pattern with the project named chef claude in which after getting the list of ingredient from the user we show some recipe to them . These recipe recommendation is fetch from claude api .
 * Today i have learned about event listener..
+* Today I learned how to use useState, understood the difference between props and useState, and built a small counter project to increase and decrease values using state.
   
 ## 🎯 Purpose
 
