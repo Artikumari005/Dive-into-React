@@ -33,7 +33,9 @@ function App(){
         <h2 className="count">{count}</h2>
         <button onClick={ handlePlus} className="plus" aria-label="Increase count">+</button>
       </div>
+     
     </main>
+    
   )
 }
 

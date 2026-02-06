@@ -1,11 +1,11 @@
 
-
+import React from 'react'
 import './index.css'
 export default function Main(){
 
    
     
-    const ingredient= ["chicken", "oregano", "tomatoes"]
+    const [ingredient ,setIngredient]= React.useState([])
     const ingredientListItems = ingredient.map(ingredient=>(
         <li key={ingredient}>{ingredient}</li>
     ))
@@ -14,8 +14,8 @@ export default function Main(){
         event.preventDefault()
        const formData = new FormData(event.currentTarget)
        const newIngredient = formData.get("ingredient")
-       ingredient.push(newIngredient)
-       console.log(newIngredient)
+       setIngredient(preIngredients => [ ...preIngredients , newIngredient])
+      
     }
     return(
         <main>
