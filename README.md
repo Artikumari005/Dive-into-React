@@ -37,7 +37,8 @@ The UI looks like a travel card layout, where:
 * Today I start with react states in which I am going to learn lots of things like event listener, api call that i have done in JS . I start this learning pattern with the project named chef claude in which after getting the list of ingredient from the user we show some recipe to them . These recipe recommendation is fetch from claude api .
 * Today i have learned about event listener..
 * Today I learned how to use useState, understood the difference between props and useState, and built a small counter project to increase and decrease values using state.
-* Today I just learn about callback function and difference between "Pass the new version of state and pass the callback function ". And then working on college minor project.. 
+* Today I just learn about callback function and difference between "Pass the new version of state and pass the callback function ". And then working on college minor project..
+* Today i just learn how useState work with objects , array . change the ingredient addition form (project:cloudeChef).
 ## 🎯 Purpose
 
 * To build a strong foundation in React
