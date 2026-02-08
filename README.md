@@ -39,6 +39,8 @@ The UI looks like a travel card layout, where:
 * Today I learned how to use useState, understood the difference between props and useState, and built a small counter project to increase and decrease values using state.
 * Today I just learn about callback function and difference between "Pass the new version of state and pass the callback function ". And then working on college minor project..
 * Today i just learn how useState work with objects , array . change the ingredient addition form (project:cloudeChef).
+* Recall the forms properties and working . Learn about methods GET , POST
+  
 ## 🎯 Purpose
 
 * To build a strong foundation in React
