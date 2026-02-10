@@ -40,6 +40,7 @@ The UI looks like a travel card layout, where:
 * Today I just learn about callback function and difference between "Pass the new version of state and pass the callback function ". And then working on college minor project..
 * Today i just learn how useState work with objects , array . change the ingredient addition form (project:cloudeChef).
 * Recall the forms properties and working . Learn about methods GET , POST
+* Hands on conditional rendering (pracritetice on already written codes).
   
 ## 🎯 Purpose
 
