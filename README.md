@@ -41,6 +41,7 @@ The UI looks like a travel card layout, where:
 * Today i just learn how useState work with objects , array . change the ingredient addition form (project:cloudeChef).
 * Recall the forms properties and working . Learn about methods GET , POST
 * Hands on conditional rendering (pracritetice on already written codes).
+* Again back to the chef claude project and update the things that are not dynamic like add a section from where we get the recipe in one click by calling api .That api is integrated tomorrow morning.
   
 ## 🎯 Purpose
 
