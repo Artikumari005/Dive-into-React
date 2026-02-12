@@ -1,6 +1,7 @@
 
 import React from "react"
 import './App.css'
+import Count from "./Count"
 
 
 /*function App() {
@@ -30,7 +31,8 @@ function App(){
       <h1>How many times Zennie say "state" in this section?</h1>
       <div className="counter">
         <button onClick={handleMinus} className="minus" aria-label="Decrese count">-</button>
-        <h2 className="count">{count}</h2>
+        <Count
+        number={count}/>
         <button onClick={ handlePlus} className="plus" aria-label="Increase count">+</button>
       </div>
      

@@ -10,7 +10,7 @@ export default function Header(){
         <>
        <nav className="navbar">
          <img src="./src/images/chef2.webp" className="img" onMouseOver={handleHover}></img>
-        <h4 className="header">Chef Claude</h4>
+        <h4 className="header">Chefexa</h4>
        </nav>
         </>
     )
