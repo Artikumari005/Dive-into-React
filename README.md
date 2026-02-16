@@ -45,6 +45,7 @@ The UI looks like a travel card layout, where:
 * Working on same chef project today i passes the recommented recipe on click to get recipe btn manually ,later on I integrated api for that till now it is hard coded.
 * I have finish the react state and build one project ai-recipe-recommender .Now I start to learn about side effects in which I conver the controlled
 compoments and so on..
+* Working on useEffect hook today I just complete the intro part and fetch data without using hooks which create infinite loop . To  set infinte loop we can implement the hook tomorrow.
 ## 🎯 Purpose
 
 * To build a strong foundation in React
