@@ -46,6 +46,7 @@ The UI looks like a travel card layout, where:
 * I have finish the react state and build one project ai-recipe-recommender .Now I start to learn about side effects in which I conver the controlled
 compoments and so on..
 * Working on useEffect hook today I just complete the intro part and fetch data without using hooks which create infinite loop . To  set infinte loop we can implement the hook tomorrow.
+* Today I have learned about useEffect what is useEffet , why it is used, and how the hooks are used or implement..
 ## 🎯 Purpose
 
 * To build a strong foundation in React
