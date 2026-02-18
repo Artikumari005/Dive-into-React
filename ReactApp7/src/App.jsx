@@ -2,14 +2,20 @@ import React from "react"
 
 export default function App(props) {
     const [starWarsData, setStarWarsState] = React.useState({})
-     const [count, setCount] = React.useState(0)
+     const [count, setCount] = React.useState(1)
     
 
-    React.useEffect(function(){
-        fetch("https://swapi.dev/api/people/1")
-        .then(res => res.json())
-        //.then(data => setStarWarsState(data))
-    } , [count])
+   // React.useEffect(()=>{
+   //     fetch("https://swapi.dev/api/people/1")
+    //    .then(res => res.json())
+    //    .then(data => setStarWarsState(data))
+   // } , [count])
+
+   React.useEffect(()=>{
+    fetch(`https://swapi.dev/api/people/${count}`)
+    .then(res => res.json())
+    .then(data=> setStarWarsState(data))
+   },[count])
     
     return (
         <div>
