@@ -48,6 +48,7 @@ compoments and so on..
 * Working on useEffect hook today I just complete the intro part and fetch data without using hooks which create infinite loop . To  set infinte loop we can implement the hook tomorrow.
 * Today I have learned about useEffect what is useEffet , why it is used, and how the hooks are used or implement..
 * Today I again working on useEffect (read documentation, apply the useEffect to gte familiar with the syntax)
+* I have completed the two projects one is meme generater another one is tenzies game using React with state management and conditional logic to hold dice, reroll unheld dice, and detect matching values.
 ## 🎯 Purpose
 
 * To build a strong foundation in React
