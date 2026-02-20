@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import html2canvas from "html2canvas"
+
 
 export default function Main() {
     const [meme, setMeme] = useState({
@@ -33,7 +35,18 @@ export default function Main() {
         }))
     }
 
-   
+   //download meme as image
+   function downloadMeme()
+{
+    const memeDiv = document.getElementById("meme")
+
+    html2canvas(memeDiv, { useCORS:true , scale:2}).then(canvas=>{
+        const link= document.createElement("a")
+        link.download = "my-meme.png"
+        link.href = canvas.toDataURL("image/png")
+link.click()
+    })
+}
     return (
         <main>
             <div className="container">
@@ -59,11 +72,14 @@ export default function Main() {
                     </label>
                     <button onClick={getRandomImage}>Get a new meme image 🖼</button>
                 </div>
-                <div className="meme">
-                    <img src={meme.imageUrl} />
+                <div className="meme" id="meme">
+                    <img src={meme.imageUrl}  crossOrigin="anonymous"/>
                     <span className="top">{meme.topText}</span>
                     <span className="bottom">{meme.bottomText}</span>
                 </div>
+                 <button className="download-btn" onClick={downloadMeme}>Download Meme ⬇</button>
+                
+                
             </div>
         </main>
     )

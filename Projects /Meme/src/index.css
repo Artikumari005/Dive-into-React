@@ -60,7 +60,7 @@
 .form button {
   grid-column: 1 / -1;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  background: black;
   color: white;
   border: none;
   cursor: pointer;
@@ -114,4 +114,16 @@
 
 .top {
   top: 0;
+}
+.download-btn {
+  grid-column: 1 / -1;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  height: 40px;
+  width: 150px;
+ align-self: flex-start;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
 }
