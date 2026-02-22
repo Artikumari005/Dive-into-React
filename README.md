@@ -49,6 +49,7 @@ compoments and so on..
 * Today I have learned about useEffect what is useEffet , why it is used, and how the hooks are used or implement..
 * Today I again working on useEffect (read documentation, apply the useEffect to gte familiar with the syntax)
 * I have completed the two projects one is meme generater another one is tenzies game using React with state management and conditional logic to hold dice, reroll unheld dice, and detect matching values.
+* I have start another project name MegaBlog . It’s a blogging platform built with React on the frontend and powered by Appwrite for backend services like authentication and database management.
 ## 🎯 Purpose
 
 * To build a strong foundation in React
