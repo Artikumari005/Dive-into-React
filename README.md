@@ -50,6 +50,7 @@ compoments and so on..
 * Today I again working on useEffect (read documentation, apply the useEffect to gte familiar with the syntax)
 * I have completed the two projects one is meme generater another one is tenzies game using React with state management and conditional logic to hold dice, reroll unheld dice, and detect matching values.
 * I have start another project name MegaBlog . It’s a blogging platform built with React on the frontend and powered by Appwrite for backend services like authentication and database management.
+* I have just create a post services like createPost, DeletePost, updatePost....
 ## 🎯 Purpose
 
 * To build a strong foundation in React
