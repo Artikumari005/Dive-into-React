@@ -1,8 +1,10 @@
 import { useState , useEffect} from 'react'
 import {useDispatch} from 'react-redux'
-import './App.css'
 import authService from './appwrite/auth'
 import {login, logout} from './store/authSlice'
+import { Header } from './components'
+import { Footer } from './components'
+import './index.css'
 function App() {
   const [loading , setLoading] =useState(true)
   const dispatch = useDispatch()
@@ -20,11 +22,14 @@ function App() {
       setLoading(false)
     })
   }, [])
-  if(loading){
-    return(
-    <h1 className='min-h-screen'>MegaBlog</h1>
-  )
-  }
+  return !loading? (
+    <div className='min-h-screen flex flex-wrap content-between bg-amber-600'>
+      <div className='w-full bg-amber-400'>
+        <Header/>
+        <Footer/>
+      </div>
+    </div>
+  ):null
 }
 
 export default App
