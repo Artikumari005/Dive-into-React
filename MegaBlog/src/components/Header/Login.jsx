@@ -3,7 +3,7 @@ import {Link , useNavigate } from "react-router-dom"
 import {login as authLogin} from '/store/authSlice'
 import {useDispatch} from 'react-redux'
 import {Button, Input ,Logo} from './index'
-import authSlice from '../appwrite/auth'
+import authService from '../appwrite/auth'
 import {useForm} from 'react-hook-form'
 
 function Login(){
@@ -45,6 +45,39 @@ function Login(){
                     hover:underline"> Sign Up
                     </Link>
                     </p>{error && <p className="text-red-600 text-center">{error}</p>}
+                    <form 
+                    onSubmit={handleSubmit(login)}
+                    className="mt-8 space-x-6">
+                        <div className="space-y-5">
+                            <Input
+                            label="Email:"
+                            placeholder="Enter your email"
+                            type="email"
+                            {...register("email" ,{
+                                required: true,
+                                 validate: {
+                                  matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                                   "Email address must be a valid address",
+                                  }
+                            })}
+                            />
+                            <Input
+                            label="password"
+                            placeholder="enter your password"
+                            type="password"
+                            {...register("password", {
+                                required:true
+                                
+                            })}
+                            />
+                            <Button
+                            type="submit"
+                            className="w-full">
+                                Sign In
+                            </Button>
+                        </div>
+                    </form>
+                    
         </div>
        </div>
     )
