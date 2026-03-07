@@ -51,7 +51,8 @@ compoments and so on..
 * I have completed the two projects one is meme generater another one is tenzies game using React with state management and conditional logic to hold dice, reroll unheld dice, and detect matching values.
 * I have start another project name MegaBlog . It’s a blogging platform built with React on the frontend and powered by Appwrite for backend services like authentication and database management.
 * I have just create a post services like createPost, DeletePost, updatePost , getPost, configure redux toolkit in  our project....
-* Today I start working on components . So far i have complete the footer and hands on header ,forms-signin/signup forms by using the hooks(dispatch,useState, link, register from form , handleSubmit)..
+* Today I start working on components . So far i have complete the footer and hands on header ,forms-signin/signup forms by using the hooks(dispatch,useState, link, register from form , handleSubmit).
+* Developed a blog post creation and editing form with automatic slug generation, image upload, and rich text editing using React and Appwrite.
 ## 🎯 Purpose
 
 * To build a strong foundation in React
