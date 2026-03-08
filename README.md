@@ -53,6 +53,7 @@ compoments and so on..
 * I have just create a post services like createPost, DeletePost, updatePost , getPost, configure redux toolkit in  our project....
 * Today I start working on components . So far i have complete the footer and hands on header ,forms-signin/signup forms by using the hooks(dispatch,useState, link, register from form , handleSubmit).
 * Developed a blog post creation and editing form with automatic slug generation, image upload, and rich text editing using React and Appwrite.
+* Implemented complete client-side routing with React Router v6 including nested routes, dynamic URL parameters, and authentication-protected pages for a full-featured blog application.
 ## 🎯 Purpose
 
 * To build a strong foundation in React
