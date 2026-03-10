@@ -31,7 +31,7 @@ function Login(){
             border-e-black`}>
                 <div className="mb-2 flex justify-center">
                       <span className="inline-block w-full">
-                        <logo width="100%"></logo>
+<Logo width="100%"></Logo>
                       </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold">

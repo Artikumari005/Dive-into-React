@@ -1,7 +1,7 @@
 import React from "react";
-import {PostForm ,Container} from './components'
+import {PostForm ,Container} from '../../components'
 
-export default function PostForm(){
+export default function AddPost(){
     return(
         <div>
             <Container>
