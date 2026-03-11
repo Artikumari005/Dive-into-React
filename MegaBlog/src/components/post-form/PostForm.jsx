@@ -17,50 +17,66 @@ import { useSelector } from "react-redux";
     })
 
     const navigate= useNavigate()
-    const userData = useSelector(state=>state.user.userData)
+const userData = useSelector(state => state.auth.userData)
 
-    const submit = async(data)=>{
-        if(post){
-           const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) : null
+    const submit = async (data) => {
+        try {
+            if (post) {
+                const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null
 
-           if(file){
-            appwriteService.deleteFile(post.featuredImage)
-           }
+                if (file) {
+                    await appwriteService.deleteFile(post.featuredImage)
+                }
 
-           const dbPost = await  appwriteService.updatePost(post.$id,{
-            ...data,
-            featuredImage: file? file.$id : undefined,
+                const dbPost = await appwriteService.updatePost(post.$id, {
+                    ...data,
+                    featuredImage: file ? file.$id : undefined,
+                })
 
-            if(dbPost){
-                navigate(`/post/${dbPost.$id}`)
+                if (dbPost) {
+                    navigate(`/post/${dbPost.$id}`)
+                }
+            } else {
+                if (!userData) {
+                    alert("Please login to create a post")
+                    return
+                }
+
+                const file = await appwriteService.uploadFile(data.image[0])
+
+                if (file) {
+                    const fileId = file.$id
+                    const dbPost = await appwriteService.createPost({
+                        ...data,
+                        featuredImage: fileId,
+                        userId: userData.$id,
+                    })
+                    if (dbPost) {
+                        navigate(`/post/${dbPost.$id}`)
+                    }
+                } else {
+                    alert("Please select an image")
+                }
             }
-           }
-        )
-        }
-        else{
-            const file = await appwriteService.uploadFile(data.image[0])
-
-            if(file){
-               const fileId= file.$id
-               data.featuredImage= fileId
-               await appwriteService.createPost({
-                ...data,
-                userId :userData.$id,
-               })
-               if(dbPost){
-                navigate(`/post/${dbPost.$id}`)
-            }
-            }
+        } catch (error) {
+            console.error("Error submitting post:", error)
+            alert("Failed to submit post: " + error.message)
         }
     }
 
-    const slugTransform = useCallback((value)=>{
-         if(value && typeof value === 'string'){
-            return value.trim().toLowerCase().replace(/^[a-zA-Z\d\s]+/g, '-').replace(/\s/g, '-')
-
-            return ''
-         }
-    },[])
+    const slugTransform = useCallback((value) => {
+        if (value && typeof value === 'string') {
+            // Convert to lowercase, replace spaces with hyphens, remove invalid chars
+            return value
+                .trim()
+                .toLowerCase()
+                .replace(/[^a-zA-Z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+                .replace(/\s+/g, '-') // Replace multiple spaces with single hyphen
+                .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+                .substring(0, 36) // Limit to 36 characters
+        }
+        return ''
+    }, [])
     React.useEffect(()=>{
        const subscription = watch ((value, {name})=>{
         if(name ==='title'){

@@ -33,34 +33,62 @@ export default function Post() {
     };
 
     return post ? (
-        <div className="py-8">
+        <div className="py-12 bg-gray-50 min-h-screen">
             <Container>
-                <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
-                    <img
-                        src={appwriteService.getFilePreview(post.featuredImage)}
-                        alt={post.title}
-                        className="rounded-xl"
-                    />
+                {/* Featured Image */}
+                <div className="w-full max-w-4xl mx-auto mb-8 relative">
+                    <div className="rounded-2xl overflow-hidden shadow-xl bg-white p-1">
+                        {post.featuredImage ? (
+                            <img
+                                src={appwriteService.getFilePreview(post.featuredImage)}
+                                alt={post.title}
+                                className="w-full max-h-96 object-cover"
+                            />
+                        ) : (
+                            <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-xl">
+                                <span className="text-gray-400">No Image Available</span>
+                            </div>
+                        )}
+                    </div>
 
                     {isAuthor && (
-                        <div className="absolute right-6 top-6">
+                        <div className="absolute right-6 top-6 flex gap-2">
                             <Link to={`/edit-post/${post.$id}`}>
-                                <Button bgColor="bg-green-500" className="mr-3">
+                                <Button bgColor="bg-green-500" className="mr-3 shadow-lg">
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgColor="bg-red-500" onClick={deletePost}>
+                            <Button bgColor="bg-red-500" onClick={deletePost} className="shadow-lg">
                                 Delete
                             </Button>
                         </div>
                     )}
                 </div>
-                <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
-                </div>
-                <div className="browser-css">
-                    {parse(post.content)}
+
+                {/* Post Content */}
+                <div className="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                    <div className="mb-6 border-b pb-4">
+                        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+                            {post.title}
+                        </h1>
+                        <div className="flex items-center text-gray-500 text-sm">
+                            <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium">
+                                {post.status || 'Published'}
+                            </span>
+                        </div>
                     </div>
+                    
+                    <div className="prose prose-lg max-w-none prose-headings:font-bold prose-a:text-amber-600 hover:prose-a:text-amber-700">
+                        {parse(post.content)}
+                    </div>
+                </div>
+
+                {/* Back to Home Link */}
+                <div className="w-full max-w-4xl mx-auto mt-6 text-center">
+                    <Link to="/" className="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium">
+                        ← Back to all posts
+                    </Link>
+                </div>
             </Container>
         </div>
     ) : null;

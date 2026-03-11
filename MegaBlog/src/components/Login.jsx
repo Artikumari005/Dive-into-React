@@ -15,7 +15,7 @@ function Login(){
         const login = async(data)=>{
             setError('')
             try{
-               const session= await authService.login(data)
+               const session= await authService.login(data.email, data.password)
                if(session){
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(authLogin(userData));
@@ -26,28 +26,28 @@ function Login(){
             }
         }
     return(
-       <div className="flex items-cenetr justify-center w-full">
-        <div className={`mx-auto w-full max-w-lg bg-amber-700 rounded-xl p-10 border
-            border-e-black`}>
+       <div className="flex items-center justify-center w-full min-h-screen py-12 bg-gray-50">
+        <div className={`mx-auto w-full max-w-lg bg-white rounded-xl p-10 border border-gray-200 shadow-lg`}>
                 <div className="mb-2 flex justify-center">
                       <span className="inline-block w-full">
 <Logo width="100%"></Logo>
                       </span>
                 </div>
-                <h2 className="text-center text-2xl font-bold">
-                    sign in to your account
+                <h2 className="text-center text-2xl font-bold leading-tight text-gray-800">
+                    Sign in to your account
                 </h2>
-                <p className="mt-2 text-center text-base text-black">
+                <p className="mt-2 text-center text-base text-gray-600">
                     Don&apos; t have any account? &nbsp;
                     <Link 
                     to='/signup'
-                    className="font-medium txt-primary transition-colors duration-300
+                    className="font-medium text-amber-600 transition-colors duration-300
                     hover:underline"> Sign Up
                     </Link>
-                    </p>{error && <p className="text-red-600 text-center">{error}</p>}
-                    <form 
+                    </p>
+                    {error && <p className="text-red-600 mt-4 text-center">{error}</p>}
+                    <form
                     onSubmit={handleSubmit(login)}
-                    className="mt-8 space-x-6">
+                    className="mt-8 space-y-5">
                         <div className="space-y-5">
                             <Input
                             label="Email:"

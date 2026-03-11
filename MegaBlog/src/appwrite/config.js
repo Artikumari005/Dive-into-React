@@ -8,26 +8,28 @@ export class Service{
     constructor(){
         this.Client
         .setEndpoint(conf.appwriteUrl)
-        .setProject(conf.appwriteProjectId); 
+        .setProject(conf.appwriteProjectId);
         this.databases= new Databases(this.Client);
         this.bucket= new Storage(this.Client);
     }
-    async createPost({title, slug , content, featuredImage, status,
-         userId}){
-            try{
-                return await this.databases.createDocument(
-                    conf.appwriteDatabaseId,
-                    conf.appwriteCollectionId,
-                    slug,{
-                        title, slug, content, featuredImage, status,
-                        userId,
-                    }
-                )
-
-            }catch(error){
-                throw error;
-            }
-         }
+    async createPost({title, slug, content, featuredImage, status, userId}) {
+        try {
+            return await this.databases.createDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug, // Using slug as the document ID
+                {
+                    title,
+                    content,
+                    featuredImage,
+                    status,
+                    userId,
+                }
+            )
+        } catch (error) {
+            throw error;
+        }
+    }
     async updatePost(slug , {title, content, featuredImage, status,
          }){
             try{
@@ -99,7 +101,7 @@ return await this.databases.getDocument(
                 return false;
             }
          }
-         async deletFile(fileId){
+         async deleteFile(fileId){
             try{
 
                 return await this.bucket.deleteFile(
@@ -112,11 +114,24 @@ return await this.databases.getDocument(
                 return false;
             }
          }
-         getFilePreview(fileId){
-            return  this.bucket.getFileView(
-                conf.appwriteBucketId,
-                fileId
-            )
+         getFilePreview(fileId) {
+            console.log("getFilePreview called with fileId:", fileId);
+            if (!fileId) {
+                console.log("No fileId provided");
+                return "";
+            }
+            try {
+                // Use getFileView instead of getFilePreview (free plan doesn't support transformations)
+                const url = this.bucket.getFileView(
+                    conf.appwriteBucketId,
+                    fileId
+                );
+                console.log("File preview URL:", url.toString());
+                return url.toString();
+            } catch (error) {
+                console.error("Error getting file preview:", error);
+                return "";
+            }
          }
 
 }
@@ -125,4 +140,4 @@ return await this.databases.getDocument(
 
 
 const services =  new Service();
-export default Service;
+export default services;
